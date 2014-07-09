@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<!-- import java scripts-->
+<script src="javascript/draggable.js"></script>
+<script src="javascript/generate_ingredient.js"></script>
+<script src="javascript/get_ing_2_cat.js"></script>
+<script src="javascript/initialize.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	
+<head>
+	<meta charset="UTF-8">
+	<title>Create - Dish Master</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+	<h3 id="app_status">
+		Debug status
+	</h3>
+
+	<div id="header">
+		<div>
+			<div class="logo">
+				<a href="index.html"></a>
+			</div>
+			<ul id="navigation">
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li class="active">
+					<a href="features.html">Create</a>
+				</li>
+				<li>
+					<a href="news.html">News</a>
+				</li>
+				<li>
+					<a href="about.html">About</a>
+				</li>
+				<li>
+					<a href="contact.html">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="contents">
+		<div id="ingredient_lists">
+			<h1>Ingredient Lists:</h1>
+			<ul class="category" id="meat_list" ondrop="drop(event)" ondragover="allowDrop(event)">
+			</ul>
+			<ul class="category" id="seafood_list" ondrop="drop(event)" ondragover="allowDrop(event)">
+			</ul>
+			<!-- <button onclick="display_ingredients()">Test</button> -->
+		</div>
+		<div id="tools">			
+			<ul class = "tool_list">
+				<img class="tool_img" id="dish_img" src="images/search page/plate3.jpg" alt="Jpg" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<div class="list" id="dish_list" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<h4>Dish: </h4>
+				</div>
+			</ul>
+			<ul class = "tool_list">
+				<img class="tool_img" id="trash_img" src="images/search page/trash.png" alt="Png" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<div class="list" id="trash_list" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<h4>Trash: </h4>
+				</div>
+			</ul>
+		</div>
+	</div>
+	
+</body>
+</html>

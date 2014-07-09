@@ -1,0 +1,57 @@
+
+<!DOCTYPE html PUBLIC>
+<html>
+<head>
+<title>Hi Foodie, see what we get you today!</title>
+<!-- this stylesheet is for page styling only -->
+
+<style media="all" type="text/css">@import "css/demo.css";</style>
+<style media="all" type="text/css">@import "css/site.css";</style>
+<style media="all" type="text/css">@import "css/ingrid.css";</style>
+<!-- to make ingrid save her state (selected rows, page number, column sort & direction); just include the jQ cookie plugin -->
+<script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+<script src="javascript/jquery.js"></script>
+<script src="javascript/jquery.cookie.js"></script>
+<script src="javascript/dish.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<!-- initialize -->
+<script type="text/javascript" src="javascript/results.js"></script>
+
+</head>
+<body>
+
+<h1>Hi Foodie, see what we get you today!</h1>
+<script id="itemTemplate" type="text/x-jquery-tmpl">
+            <tr>
+                <td>${Name}</td>
+                <td>${phone}</td>
+                <td>${Ingredient}</td>
+                <td>${Score}</td>
+            </tr>
+</script>
+<script>
+    function bind_data() {
+                for (i = 0; i < result_dish.length; i++) {
+                    $("#itemTemplate").tmpl(result_dish[i]).appendTo("#itemList tbody");
+                }
+
+            }
+</script>
+
+<table id="itemList" class="scroll">
+  <thead>
+    <tr>       
+      <th>Dish Name</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>  
+  
+
+</body>
+</html>
